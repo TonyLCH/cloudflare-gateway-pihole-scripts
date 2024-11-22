@@ -2,7 +2,8 @@ name: Update Filter Lists
 
 on:
   schedule:
-    - cron: "45 7 * * 0,2,5"
+    - cron: "45 3 * * 0,2,5"
+    - timezone: 'Asia/Hong_Kong'
   push:
     branches:
       - main
