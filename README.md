@@ -55,7 +55,7 @@ Please note that:
 2. Create the following GitHub Actions secrets in your repository settings:
    - `CLOUDFLARE_API_TOKEN`: Your Cloudflare API Token with Zero Trust read and edit permissions
    - `CLOUDFLARE_ACCOUNT_ID`: Your Cloudflare account ID
-   - `CLOUDFLARE_LIST_ITEM_LIMIT`: The maximum number of blocked domains allowed for your Cloudflare Zero Trust plan. Default to 300,000. Optional if you are using the free plan.
+   - `CLOUDFLARE_LIST_ITEM_LIMIT`: The maximum number of blocked domains allowed for your Cloudflare Zero Trust plan. Values above 300,000 are automatically capped to 300,000 to avoid API errors on plans with this limit.
    - `PING_URL`: /Optional/ The HTTP(S) URL to ping (using curl) after the GitHub Action has successfully updated your filters. Useful for monitoring.
    - `DISCORD_WEBHOOK_URL`: /Optional/ The Discord (or similar) webhook URL to send notifications to. Good for monitoring as well.
 3. Create the following GitHub Actions variables in your repository settings if you desire:
